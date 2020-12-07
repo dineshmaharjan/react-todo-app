@@ -1,5 +1,5 @@
 import React from "react";
-
+import '../home/home.css';
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
@@ -71,7 +71,7 @@ class HomePage extends React.Component {
         <div>
           <form onSubmit={this.handleOnSubmit}>
             <div className="form-group">
-              <label htmlFor="title">Title</label>
+              <label htmlFor="title">Title</label><br />
               <input
                 type="text"
                 className="form-control"
@@ -80,7 +80,7 @@ class HomePage extends React.Component {
                 value={this.state.title}
                 placeholder="Enter note title"
                 onChange={this.handleInputChange}
-              />
+              /><br />
               {errors["title"] ? (
                 <span id="titleError" className="form-text text-muted">
                   {errors["title"]}
@@ -92,7 +92,7 @@ class HomePage extends React.Component {
             <br />
 
             <div className="form-group">
-              <label htmlFor="description">Description</label>
+              <label htmlFor="description">Description</label><br />
               <input
                 type="text"
                 className="form-control"
@@ -101,7 +101,7 @@ class HomePage extends React.Component {
                 placeholder="Enter note description"
                 value={this.state.description}
                 onChange={this.handleInputChange}
-              />
+              /><br/>
               {errors["description"] ? (
                 <span id="descriptionError" className="form-text text-muted">
                   {errors["description"]}
@@ -111,15 +111,15 @@ class HomePage extends React.Component {
               )}
             </div>
             <br />
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="button">
               Submit
             </button>
           </form>
         </div>
         <br />
         <div>
-          <table>
-            <thead>
+          <table className="r-table">
+            <thead className="table-header">
               <tr>
                 <th>S.N.</th>
                 <th>Title</th>
